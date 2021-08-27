@@ -1,0 +1,21 @@
+function sender()
+{
+    _index=1;
+    _sec = 10000;
+    setInterval(function () {
+    _index++;
+    if(_index <= 200)
+	{
+    	console.log(_sec);
+    	        setTimeout(function () { 
+    	       document.querySelector("li.wo9IH:nth-child("+(_index+1)+") > div:nth-child(1) > div:nth-child(2) > button:nth-child(1)").click();
+ 				setTimeout(function () {  
+						 document.querySelector("button.aOOlW:nth-child(1)").click(); 
+				 }, 2000) ;
+    	        }, 1000)   
+	}
+    
+    }, _sec)
+}
+
+sender();
