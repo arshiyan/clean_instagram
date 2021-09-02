@@ -2,21 +2,27 @@ function sender()
 {
     _index=1;
     _sec = 10000;
+    _fetch_index = 1;
     setInterval(function () {
     _index++;
-    if(_index <= 200)
+    if(_index <= 2000)
 	{
-    	console.log(_sec);
+    	        console.log(_sec);
     	        setTimeout(function () { 
     	       document.querySelector("li.wo9IH:nth-child("+(_index+1)+") > div:nth-child(1) > div:nth-child(2) > button:nth-child(1)").click();
  				setTimeout(function () {  
 						 document.querySelector("button.aOOlW:nth-child(1)").click(); 
 				 }, 2000) ;
-    	        }, 1000)   
-		 
-		 window.scrollTo(0,document.body.scrollHeight); //scroll to bottom
-
-	}
+				 
+				 _fetch_index++;
+				 if(_fetch_index % 9 == 0)
+				 {
+				 	 console.log(" fetch new following" );
+				 	 window.scrollTo(0,document.body.scrollHeight);
+				 }
+				 
+    	        }, 1000) ;  
+    	       	}
     
     }, _sec)
 }
