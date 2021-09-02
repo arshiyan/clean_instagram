@@ -13,6 +13,9 @@ function sender()
 						 document.querySelector("button.aOOlW:nth-child(1)").click(); 
 				 }, 2000) ;
     	        }, 1000)   
+		 
+		 window.scrollTo(0,document.body.scrollHeight); //scroll to bottom
+
 	}
     
     }, _sec)
