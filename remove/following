@@ -1,25 +1,25 @@
 function sender() {
     _index = 1;
-    _sec = 6000;
+    _sec = 10000;
     _fetch_index = 1;
     _set_random = 1;
-    
     setInterval(function() {
         _index++;
         if (_index <= 2000) {
             _set_random = Math.floor(Math.random() * 1000); // 0 to 999
-            if (_set_random % 2 == 0) {
-                console.log(_sec);
+            if (_set_random % 3 == 0) {
+
                 setTimeout(function() {
                     document.querySelector("li.wo9IH:nth-child(" + (_index + 1) + ") > div:nth-child(1) > div:nth-child(2) > button:nth-child(1)").click();
+                    var username = document.querySelector("li.wo9IH:nth-child(" + (_index + 1) + ") > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1)").textContent;
+                    console.log(username + " removed");
                     setTimeout(function() {
                         document.querySelector("button.aOOlW:nth-child(1)").click();
                     }, 2000);
-		    
                     _fetch_index++;
                     if (_fetch_index % 9 == 0) {
                         console.log(" fetch new following");
-                        window.scrollTo(0, document.body.scrollHeight); // scroll and get new following
+                        window.scrollTo(0, document.body.scrollHeight);
                     }
 
                 }, 1000);
