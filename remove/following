@@ -16,14 +16,15 @@ function sender() {
                     setTimeout(function() {
                         document.querySelector("button.aOOlW:nth-child(1)").click();
                     }, 2000);
-                    _fetch_index++;
+                   
+                }, 1000);
+                
+            }
+ 					_fetch_index++;
                     if (_fetch_index % 9 == 0) {
                         console.log(" fetch new following");
                         window.scrollTo(0, document.body.scrollHeight);
                     }
-
-                }, 1000);
-            }
 
         }
 
