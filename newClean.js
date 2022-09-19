@@ -2,19 +2,20 @@ function sender()
 {
     _index=1;
     //_sec = 18000000;
-    _sec = 10000;
+    _sec = (Math.floor(Math.random() * 10000) + 30000);
     setInterval(function () {
     _index++;
     if(_index <= 200) //200 posts
 	{
     	     setTimeout(function () { 
-    	       			document.querySelector("#react-root > section > main > div > div._2z6nI > article > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(1) > a").click();
+    	     
+    	       			document.querySelector("a._aa-z:nth-child(2)").click(); // redirect to feed
  							setTimeout(function () {  
-						 document.querySelector("#react-root > section > main > div > div > article > div.MEAGs > button").click(); 
-							 setTimeout(function () { 
-							 
-							 document.querySelector("body > div.RnEpo.Yx5HN > div > div > div > div > button.aOOlW.-Cab_").click(); 
-							 setTimeout(function () { document.querySelector('body > div.RnEpo.Yx5HN > div > div > div > div.mt3GC > button.aOOlW.-Cab_').click(); }, 1000)  
+						                document.querySelector("article._aatb:nth-child("+ (Math.floor(Math.random() * 9) + 1) +") > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > button:nth-child(1)").click(); //select and click on ... of post 
+							                            setTimeout(function () { 
+							                                                         document.querySelector("button._a9--:nth-child(1)").click(); //choose delete
+							                                        setTimeout(function () { 
+							                                                          document.querySelector("button._a9--:nth-child(1)").click(); }, 1000)  //and then delete
 							 
 							 }, 2000)         //  selector to click delete option
        						 
